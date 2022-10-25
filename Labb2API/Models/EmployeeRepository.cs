@@ -17,9 +17,7 @@ namespace Labb2API.Models
         public IEnumerable<Employee> GetAllEmployees()
         {
             var test = _appDbContext.Employees.Include(e => e.Department).ToList();
-            //var AllEmployees = from emp in _appDbContext.Employees
-            //           join dep in _appDbContext.Departments on emp.DepartmentId equals dep.DepartmentId
-            //           select emp;
+
             return test;
         }
 
